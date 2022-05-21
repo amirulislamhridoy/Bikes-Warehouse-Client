@@ -31,9 +31,9 @@ const Update = () => {
   };
   const handleFormIncrease = (e) => {
     e.preventDefault();
-    const quantity = parseInt(bike.quantity) + +(e.target.number.value);
-    const id = bike._id
-    const data = {quantity, id}
+    const quantity = parseInt(bike.quantity) + +e.target.number.value;
+    const id = bike._id;
+    const data = { quantity, id };
 
     fetch("http://localhost:5000/bike", {
       method: "PUT",
@@ -81,6 +81,11 @@ const Update = () => {
           </form>
         </div>
       </div>
+      <Link to="/manageInventories">
+        <button className="btn btn-primary mb-2 fs-2 ">
+        Manage Inventories
+        </button>
+      </Link>
     </div>
   );
 };
