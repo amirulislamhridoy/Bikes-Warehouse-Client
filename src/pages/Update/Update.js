@@ -13,6 +13,25 @@ const Update = () => {
 
   const handleDelivery = (bike) => {
     const quantity = parseInt(bike.quantity) - 1;
+    const id = bike._id;
+    const data = { quantity, id };
+    fetch("http://localhost:5000/bike", {
+      method: "PUT",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        setBike((bike.quantity = quantity));
+        // console.log(json);
+        // console.log(bike);
+      });
+  };
+  const handleFormIncrease = (e) => {
+    e.preventDefault();
+    const quantity = parseInt(bike.quantity) + +(e.target.number.value);
     const id = bike._id
     const data = {quantity, id}
 
@@ -24,10 +43,10 @@ const Update = () => {
       },
     })
       .then((response) => response.json())
-      .then((json) => { 
-        setBike(bike.quantity = quantity)
-        console.log(json)
-        console.log(bike)
+      .then((json) => {
+        setBike((bike.quantity = quantity));
+        // console.log(json);
+        // console.log(bike);
       });
   };
   return (
@@ -46,9 +65,20 @@ const Update = () => {
           >
             Delivery
           </button>
-          {/* <Link to={`/update/${bike._id}`} className="btn btn-primary">
-            Stock Update
-          </Link> */}
+          <form className="d-flex mt-3" onSubmit={handleFormIncrease}>
+            <input
+              className="form-control w-75"
+              name="number"
+              type="number"
+              placeholder="Increasing Number or Digit"
+              required
+            />
+            <input
+              className="input-group-text bg-primary text-white"
+              type="submit"
+              value="Increase"
+            />
+          </form>
         </div>
       </div>
     </div>
