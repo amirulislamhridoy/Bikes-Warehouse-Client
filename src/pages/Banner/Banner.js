@@ -1,5 +1,7 @@
 import React from "react";
 import banner1 from "../../photos/banner/banner1.jpg";
+import banner2 from "../../photos/banner/banner2.jpg";
+import banner3 from "../../photos/banner/banner3.jpg";
 import './Banner.css'
 
 const Banner = () => {
@@ -15,7 +17,7 @@ const Banner = () => {
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="0"
-            className="active"
+            className="active bg-warning"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -24,44 +26,46 @@ const Banner = () => {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="1"
             aria-label="Slide 2"
+            className="bg-warning"
           ></button>
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="2"
             aria-label="Slide 3"
+            className="bg-warning"
           ></button>
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={banner1} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
+              <h5 className="text-danger">First slide label</h5>
+              <p className="text-danger">
                 Some representative placeholder content for the first slide.
               </p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner1} className="d-block w-100 vh-100" alt="..." />
+            <img src={banner3} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
+              <h5 className="text-warning">Second slide label</h5>
+              <p className="text-warning">
                 Some representative placeholder content for the second slide.
               </p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner1} className="d-block w-100 vh-100" alt="..." />
+            <img src={banner2} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
+              <h5 className="text-secondary">Third slide label</h5>
+              <p className="text-secondary">
                 Some representative placeholder content for the third slide.
               </p>
             </div>
           </div>
         </div>
-        <button
+        {/* <button
           className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleCaptions"
@@ -78,7 +82,7 @@ const Banner = () => {
         >
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );
