@@ -47,6 +47,7 @@ const Update = () => {
         setBike((bike.quantity = quantity));
         // console.log(json);
         // console.log(bike);
+        e.target.reset()
       });
   };
   return (

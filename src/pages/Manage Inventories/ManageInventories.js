@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./ManageInventories.css";
 
 const ManageInventories = () => {
@@ -11,23 +12,28 @@ const ManageInventories = () => {
   }, []);
 
   const handleDeleteButton = (e) => {
-      console.log(e)
+    console.log(e);
     const confirm = window.confirm("Are you sure to DELETE");
     if (confirm) {
       fetch(`http://localhost:5000/bike/${e._id}`, {
         method: "DELETE",
       })
-      .then(res => res.json())
-      .then(data => {
-        // console.log(data)
-        const remaining = inventories.filter(inv => inv._id !== e._id)
-        setInventories(remaining)
-      })
+        .then((res) => res.json())
+        .then((data) => {
+          // console.log(data)
+          const remaining = inventories.filter((inv) => inv._id !== e._id);
+          setInventories(remaining);
+        });
     }
   };
   return (
     <div className="container">
-      <h1 className="mt-5 pt-5 mb-3">Manage Inventories</h1>
+      <div className="d-flex justify-content-between align-items-end">
+        <h1 className="mt-5 pt-5 mb-3">Manage Inventories</h1>
+        <Link to="/addNewItem">
+          <button className="btn btn-primary mb-3">Add New Item</button>
+        </Link>
+      </div>
 
       <table className="table" border="1">
         <thead className="thead-dark">

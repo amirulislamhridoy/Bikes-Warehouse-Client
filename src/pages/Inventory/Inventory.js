@@ -11,7 +11,7 @@ const Inventory = () => {
   return (
     <div className="container text-center mb-4">
       <h1 className="mt-5 mb-3 pb-2 pt-1">Inventory Items</h1>
-      <div className="row row-cols-2 g-4">
+      <div className="row row-cols-2 g-4 mb-5">
         {inventories.slice(0, 6).map((inv) => (
           <div className="card shadow" key={inv._id}>
             <img src={inv.img} className="card-img-top" alt="..." />
@@ -30,6 +30,11 @@ const Inventory = () => {
           </div>
         ))}
       </div>
+      <Link to="/manageInventories">
+        <button className="btn btn-primary mb-2 fs-2 ">
+        Manage Inventories
+        </button>
+      </Link>
     </div>
   );
 };
