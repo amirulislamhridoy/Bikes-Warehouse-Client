@@ -5,15 +5,17 @@
         "description": "Yamaha YZF R15 V3 Dark Knight Bike Price in BD 2022. Which Engine Type is Liquid-cooled, 4-stroke, SOHC, 4-valve. This bike is powered by the 155.00 ccEngine. Yamaha YZF R15 V3 Dark Knight Generates Maximum Power 19.3PS @ 10,000 rpm.",
         "price": "525000",
         "quantity": "20",
-        "supplierName": "Sojib"
+        "supplierName": "Sojib",
+        "id": "1"
     },
     {
         "name": "Suzuki Gixxer",
         "img": "https://i.ibb.co/p0J0B96/gisser.webp",
         "description": "Suzuki Gixxer 155 Fi ABS Bike Price in BD 2022. Which Engine Type is Air-Cooled, 4-stroke, 1-Cylinder. This bike is powered by the 155.00 ccEngine. Suzuki Gixxer 155 Fi ABS Generates Maximum Power 14.8ps@8,000rpm.",
-        "price": "17000",
+        "price": "170000",
         "quantity": "12",
-        "supplierName": "Omer"
+        "supplierName": "Omer",
+        "id": "2"
     },
     {
         "name": "Suzuki Gixxer SF",
@@ -21,7 +23,8 @@
         "description": "Suzuki Gixxer SF Fi ABS Bike Price in BD 2022. Which Engine Type is 4-Stroke,1-Cylinder, Air cooled. This bike is powered by the 155.00 ccEngine. Suzuki Gixxer SF Fi ABS Generates Maximum Power 14.1",
         "price": "200000",
         "quantity": "20",
-        "supplierName": "Faruk"
+        "supplierName": "Faruk",
+        "id": "3"
     },
     {
         "name": "Suzuki GSR",
@@ -29,7 +32,8 @@
         "description": "Suzuki GSX-R Dual ABS Bike Price in BD 2022. Which Engine Type is Liquid-Cooled, 4-stroke, 1-Cylinder. This bike is powered by the 147.30 ccEngine. Suzuki GSX-R Dual ABS Generates Maximum Power 14.1 KW@10500 rpm.",
         "price": "350000",
         "quantity": "8",
-        "supplierName": "Nazmul"
+        "supplierName": "Nazmul",
+        "id": "4"
     },
     {
         "name": "Honda Honnet",
@@ -37,7 +41,8 @@
         "description": "Honda CB Hornet 160R CBS Bike Price in BD 2022. Which Engine Type is Air Cooled, 4 Stroke, SI Engine. This bike is powered by the 162.71 ccEngine. Honda CB Hornet 160R CBS Generates Maximum Power 14.90 BHP.",
         "price": "200000",
         "quantity": "18",
-        "supplierName": "Kobir"
+        "supplierName": "Kobir",
+        "id": "5"
     },
     {
         "name": "Hero Hunk",
@@ -45,7 +50,8 @@
         "description": "Hero Hunk Matt Single Disc Bike Price in BD 2022. Which Engine Type is Air Cooled, 4 - stroke single cylinder OHC. This bike is powered by the 149.20 ccEngine. Hero Hunk Matt Single Disc",
         "price": "150000",
         "quantity": "10",
-        "supplierName": "Farhan"
+        "supplierName": "Farhan",
+        "id": "6"
     },
     {
         "name": "Yamaha MT15",
@@ -53,7 +59,8 @@
         "description": "Yamaha MT-15 Version 2.0 Bike Price in BD 2022. Which Engine Type is Liquied-Cooled, 4-Stroke, SOHC, 4-Valve, Single Cylinder, VVA. This bike is powered by the 155.00 ccEngine.",
         "price": "425000",
         "quantity": "15",
-        "supplierName": "Omer"
+        "supplierName": "Omer",
+        "id": "7"
     },
     {
         "name": "Honda REPSOL",
@@ -61,7 +68,8 @@
         "description": "Honda CBR150R Repsol Bike Price in BD 2022. Which Engine Type is 4 Stroke, 4 Valve, DOHC. This bike is powered by the 149.16 ccEngine. Honda CBR150R Repsol Generates Maximum Power 12.6 KW @ 9000 rpm.",
         "price": "500000",
         "quantity": "14",
-        "supplierName": "Sakib"
+        "supplierName": "Sakib",
+        "id": "8"
     },
     {
         "name": "Honda X-Bleade",
@@ -69,7 +77,8 @@
         "description": "Honda XBlade 160 SD Bike Price in BD 2022. Which Engine Type is Air-Cooled, 4-Stroke, Single Cylinder. This bike is powered by the 162.71 ccEngine. Honda XBlade 160 SD Generates Maximum Power 13.93 BHP @ 8500 rpm.",
         "price": "180000",
         "quantity": "14",
-        "supplierName": "Faysal"
+        "supplierName": "Faysal",
+        "id": "9"
     },
     {
         "name": "Hero xtreme",
@@ -77,7 +86,8 @@
         "description": "Hero Xtreme Sports Single Disc Bike Price in BD 2022. Which Engine Type is Air Cooled, 4 - Stroke Single Cylinder OHC. This bike is powered by the 149.20 ccEngine. ",
         "price": "200000",
         "quantity": "16",
-        "supplierName": "Akram"
+        "supplierName": "Akram",
+        "id": "10"
     }
 ]
 

@@ -1,17 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Inventory = () => {
-    const [inventories, setInventories] =useState([])
-    useEffect( () => {
-        fetch('inventory.json')
-        .then(res => res.json())
-        .then(data => setInventories(data))
-    }, [])
-    return (
-        <div className="container text-center">
-            {inventories.slice(0,6).map(inv => <img width='200' height="200" src={inv.img} alt=""  ></img>)}
-        </div>
-    );
+  const [inventories, setInventories] = useState([]);
+  useEffect(() => {
+    fetch("inventory.json")
+      .then((res) => res.json())
+      .then((data) => setInventories(data));
+  }, []);
+  return (
+    <div className="container text-center mb-4">
+        <h1 className="mt-5 mb-3 pb-2 pt-1">Inventory Items</h1>
+      <div className='row row-cols-2 g-4'>
+        {inventories.slice(0, 6).map((inv) => (
+          <div className="card">
+            <img src={inv.img} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h4 className="card-title">{inv.name}</h4>
+              <p className="card-text">
+                {inv.description}
+              </p>
+              <h5>Taka: {inv.price}</h5>
+              <h5>Supplier: {inv.supplierName}</h5>
+              <Link to={`/update/${inv.id}`} className="btn btn-primary">
+                Stock Update
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Inventory;
