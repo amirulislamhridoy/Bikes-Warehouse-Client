@@ -90,8 +90,6 @@ const Blog = () => {
               <td>Follows CAP(consistency, availability, partition tolerance)</td>
           </tr>
       </table>
-      <h2>Stack overflow Question</h2>
-      <h3>https://stackoverflow.com/questions/72339189/netlify-hosting-main-rule-how-can-i-do-it</h3>
     </div>
   );
 };
