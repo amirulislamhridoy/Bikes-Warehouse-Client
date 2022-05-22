@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase_init";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -11,6 +11,13 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const navigate = useNavigate()
+      const location = useLocation()
+
+      const from = location.state?.from?.pathname || "/";
+if(user){
+  navigate(from, {replace: true})
+}
     const handleFormSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value
@@ -48,6 +55,7 @@ const Login = () => {
         <div className="">
           <Link className="register-login-link" to="/register">Create an Account ?</Link>
         </div>
+        <p><b className="text-danger">{error?.message}</b></p>
         <button type="submit" className="btn btn-primary">
           Login
         </button>

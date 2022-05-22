@@ -11,6 +11,8 @@ import Navbar from './pages/Navbar/Navbar';
 import Register from './pages/Register/Register';
 import Update from './pages/Update/Update';
 import MyItem from './pages/MyItem/MyItem';
+import NotFound from './pages/NotFound/NotFound'
+import RequireAuth from './pages/RequireAuth/RequireAuth.js'
 
 function App() {
   return (
@@ -18,12 +20,16 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/update/:id" element={<Update />} />
+        <Route path="/update/:id" element={
+        <RequireAuth>
+          <Update />
+          </RequireAuth>} />
         <Route path="/manageInventories" element={<ManageInventories />} />
         <Route path="/addNewItem" element={<AddNewItem />} />
         <Route path="/myItem" element={<MyItem />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
       <ToastContainer />

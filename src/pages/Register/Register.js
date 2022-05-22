@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import auth from "../../firebase_init";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import './Register.css'
 
 const Register = () => {
@@ -14,7 +14,15 @@ const Register = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
       const [updateProfile, updating, updateError] = useUpdateProfile(auth, {sendEmailVerification: true});
+      const location = useLocation()
+      const navigate = useNavigate()
 
+      let from = location.state?.from?.pathname || "/";
+
+      if(user){
+        navigate(from, {replace: true})
+      }
+// console.log(error.code)
     const handleFormSubmit = async e => {
         e.preventDefault();
         const name = e.target.name.value
@@ -76,6 +84,7 @@ const Register = () => {
         <div>
             <Link className='register-login-link' to="/login">Already you have an account</Link>
         </div>
+        <p className='text-danger'><b>{error?.code}</b></p>
         <button disabled={!check} type="submit" className="btn btn-primary">
           Sign Up
         </button>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../photos/logo/favicon.ico";
 import "./Navbar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,6 +8,12 @@ import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate()
+
+  const handleSignOut = () => {
+    signOut(auth)
+    navigate('/login')
+  }
   return (
     <nav className="navbar navbar-expand-lg bg-light nav-container position-fixed top-0 bg-transparent">
       <div className="container-fluid">
@@ -25,7 +31,7 @@ const Navbar = () => {
                   <Link
                     className="nav-link active fw-bold"
                     aria-current="page"
-                    to="/hello"
+                    to="/manageInventories"
                   >
                     Manage Items
                   </Link>
@@ -35,7 +41,7 @@ const Navbar = () => {
                   <Link
                     className="nav-link active fw-bold"
                     aria-current="page"
-                    to="#"
+                    to="/addNewItem"
                   >
                     Add Items
                   </Link>
@@ -52,9 +58,18 @@ const Navbar = () => {
               </>
             )}
             <li className="nav-item">
+                  <Link
+                    className="nav-link active fw-bold"
+                    aria-current="page"
+                    to="/blog"
+                  >
+                    Blog
+                  </Link>
+                </li>
+            <li className="nav-item">
               {user ? (
                 <button
-                  onClick={() => signOut(auth)}
+                  onClick={handleSignOut}
                   className="btn btn-danger"
                 >
                   Log Out

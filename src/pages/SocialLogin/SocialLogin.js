@@ -5,11 +5,21 @@ import github from "../../photos/socialLogin/github.png";
 import "./SocialLogin.css";
 import auth from "../../firebase_init";
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
     const [signInWithFacebook, facebookUser, facebookLoading, facebookError] = useSignInWithFacebook(auth);
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    let from = location.state?.from?.pathname || "/";
+
+    if(user || githubUser || facebookUser){
+        navigate(from , {replace: true})
+    }
+    
   return (
     <div className="mt-3">
       <button onClick={() => signInWithGoogle()} className="btn google-btn me-5">
