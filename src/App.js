@@ -13,6 +13,7 @@ import Update from './pages/Update/Update';
 import MyItem from './pages/MyItem/MyItem';
 import NotFound from './pages/NotFound/NotFound'
 import RequireAuth from './pages/RequireAuth/RequireAuth.js'
+import Blog from './pages/Blog/Blog';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/myItem" element={<MyItem />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>

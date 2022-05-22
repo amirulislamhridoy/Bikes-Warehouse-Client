@@ -1,27 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import "./ManageInventories.css";
 
 const ManageInventories = () => {
   const [inventories, setInventories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bike")
+    fetch("https://secure-spire-67449.herokuapp.com/bike")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
 
   const handleDeleteButton = (e) => {
-    console.log(e);
     const confirm = window.confirm("Are you sure to DELETE");
     if (confirm) {
-      fetch(`http://localhost:5000/bike/${e._id}`, {
+      fetch(`https://secure-spire-67449.herokuapp.com/bike/${e._id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data)
           toast('You are delete 1 item.')
           const remaining = inventories.filter((inv) => inv._id !== e._id);
           setInventories(remaining);

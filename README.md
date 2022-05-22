@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Bike Warehouse(https://velvety-entremet-267826.netlify.app/)
+[https://velvety-entremet-267826.netlify.app/](https://velvety-entremet-267826.netlify.app/)
+
+Description: This is our Bike warehouse. We do import live from this company. This bikes are very low price. We have many bike in low or high budget.
+
+* Protected Route
+* Authentication
+* Authorization
+* Add Bike Date
+* Update Bike Date
+* Delete Bike Date
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

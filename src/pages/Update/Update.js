@@ -6,7 +6,7 @@ const Update = () => {
   const [bike, setBike] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bike/${id}`)
+    fetch(`https://secure-spire-67449.herokuapp.com/bike/${id}`)
       .then((res) => res.json())
       .then((data) => setBike(data));
   }, [bike]);
@@ -15,7 +15,7 @@ const Update = () => {
     const quantity = parseInt(bike.quantity) - 1;
     const id = bike._id;
     const data = { quantity, id };
-    fetch("http://localhost:5000/bike", {
+    fetch("https://secure-spire-67449.herokuapp.com/bike", {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {
@@ -25,8 +25,6 @@ const Update = () => {
       .then((response) => response.json())
       .then((json) => {
         setBike((bike.quantity = quantity));
-        // console.log(json);
-        // console.log(bike);
       });
   };
   const handleFormIncrease = (e) => {
@@ -35,7 +33,7 @@ const Update = () => {
     const id = bike._id;
     const data = { quantity, id };
 
-    fetch("http://localhost:5000/bike", {
+    fetch("https://secure-spire-67449.herokuapp.com/bike", {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {
@@ -45,8 +43,6 @@ const Update = () => {
       .then((response) => response.json())
       .then((json) => {
         setBike((bike.quantity = quantity));
-        // console.log(json);
-        // console.log(bike);
         e.target.reset()
       });
   };

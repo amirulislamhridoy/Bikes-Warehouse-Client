@@ -1,15 +1,18 @@
 .lds-circle {
-    display: inline-block;
+    display: block;
+    text-align: center;
     transform: translateZ(1px);
   }
   .lds-circle > div {
     display: inline-block;
-    width: 64px;
-    height: 64px;
+    width: 100px;
+    height: 100px;
     margin: 8px;
     border-radius: 50%;
-    background: #fff;
+    background: rgb(50, 48, 48);
     animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    margin: 0 auto;
+    margin-top: 100px;
   }
   @keyframes lds-circle {
     0%, 100% {

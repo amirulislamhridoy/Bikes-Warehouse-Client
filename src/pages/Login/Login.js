@@ -1,34 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {
+  useSendEmailVerification,
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase_init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-      ] = useSignInWithEmailAndPassword(auth);
-      const navigate = useNavigate()
-      const location = useLocation()
+  const [load, setLoad] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [sendEmailVerification, sending, emailError] =
+    useSendEmailVerification(auth);
+  const [sendPasswordResetEmail, resetSending, resetError] =
+    useSendPasswordResetEmail(auth);
 
-      const from = location.state?.from?.pathname || "/";
-if(user){
-  navigate(from, {replace: true})
-}
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        const email = e.target.email.value
-        const password = e.target.password.value
-        signInWithEmailAndPassword(email, password)
-        e.target.reset();
-    }
+  const from = location.state?.from?.pathname || "/";
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleEmailVerification = async () => {
+    await sendEmailVerification();
+  };
+  const handleResetPassword = async () => {
+    await sendPasswordResetEmail(email);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setLoad(true);
+
+    signInWithEmailAndPassword(email, password);
+    fetch('https://secure-spire-67449.herokuapp.com/login', {
+      method: "POST",
+    body: JSON.stringify({email}),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        // console.log(json)
+        localStorage.setItem('accessToken', `Bearer ${json.token}`)
+      });
+
+    e.target.reset();
+    setLoad(false);
+  };
   return (
-    <div className='w-50 mx-auto' style={{marginTop: '100px', marginBottom: '50px'}}>
-        <h2>Login</h2>
-      <form className='' onSubmit={handleFormSubmit}>
+    <div
+      className="w-50 mx-auto"
+      style={{ marginTop: "100px", marginBottom: "50px" }}
+    >
+      <h2>Login</h2>
+      <div className={`lds-circle ${!load && "d-none"}`}>
+        <div></div>
+      </div>
+      <form className="" onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
@@ -38,7 +81,7 @@ if(user){
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            name="email"
+            onChange={handleEmail}
           />
         </div>
         <div className="mb-3">
@@ -49,13 +92,31 @@ if(user){
             type="password"
             className="form-control"
             id="exampleInputPassword1"
-            name="password"
+            onChange={handlePassword}
           />
         </div>
+        <Link
+          className="register-login-link"
+          to=""
+          onClick={handleResetPassword}
+        >
+          Reset Password
+        </Link>
+        <Link
+          className="register-login-link"
+          to=""
+          onClick={handleEmailVerification}
+        >
+          Email Verification
+        </Link>
         <div className="">
-          <Link className="register-login-link" to="/register">Create an Account ?</Link>
+          <Link className="register-login-link" to="/register">
+            Create an Account ?
+          </Link>
         </div>
-        <p><b className="text-danger">{error?.message}</b></p>
+        <p>
+          <b className="text-danger">{error?.message}</b>
+        </p>
         <button type="submit" className="btn btn-primary">
           Login
         </button>

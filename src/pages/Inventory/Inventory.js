@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import './Inventory.css'
 
 const Inventory = () => {
   const [inventories, setInventories] = useState([]);
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
-    fetch("http://localhost:5000/bike")
+    fetch("https://secure-spire-67449.herokuapp.com/bike")
       .then((res) => res.json())
-      .then((data) => setInventories(data));
+      .then((data) => {
+        setInventories(data)
+        setLoading(false)
+      });
   }, []);
   return (
     <div className="container text-center mb-4">
+      <div className={`lds-circle ${!loading && 'd-none'}`}><div></div></div>
       <h1 className="mt-5 mb-3 pb-2 pt-1">Inventory Items</h1>
-      <div className="row row-cols-2 g-4 mb-5">
+      <div className="row row-cols-md-2 g-4 mb-5">
         {inventories.slice(0, 6).map((inv) => (
           <div className="card shadow" key={inv._id}>
             <img src={inv.img} className="card-img-top" alt="..." />

@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import './Register.css'
+import SocialLogin from '../SocialLogin/SocialLogin'
 
 const Register = () => {
     const [check, setCheck] = useState(false)
@@ -22,7 +23,6 @@ const Register = () => {
       if(user){
         navigate(from, {replace: true})
       }
-// console.log(error.code)
     const handleFormSubmit = async e => {
         e.preventDefault();
         const name = e.target.name.value
@@ -89,6 +89,7 @@ const Register = () => {
           Sign Up
         </button>
       </form>
+      <SocialLogin />
     </div>
   );
 };
