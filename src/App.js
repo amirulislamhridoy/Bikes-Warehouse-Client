@@ -1,5 +1,6 @@
-import { ToastContainer } from 'react-bootstrap';
+import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import AddNewItem from './pages/AddNewItem/AddNewItem';
 import Footer from './pages/Footer/Footer';
@@ -9,6 +10,7 @@ import ManageInventories from './pages/Manage Inventories/ManageInventories';
 import Navbar from './pages/Navbar/Navbar';
 import Register from './pages/Register/Register';
 import Update from './pages/Update/Update';
+import MyItem from './pages/MyItem/MyItem';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/update/:id" element={<Update />} />
         <Route path="/manageInventories" element={<ManageInventories />} />
         <Route path="/addNewItem" element={<AddNewItem />} />
+        <Route path="/myItem" element={<MyItem />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>

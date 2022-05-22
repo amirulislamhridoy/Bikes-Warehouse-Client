@@ -82,11 +82,11 @@ const Update = () => {
           </form>
         </div>
       </div>
-      <Link to="/manageInventories">
+      {/* <Link to="/manageInventories">
         <button className="btn btn-primary mb-2 fs-2 ">
         Manage Inventories
         </button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

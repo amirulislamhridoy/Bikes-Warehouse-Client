@@ -2,11 +2,15 @@ import React from "react";
 import { ToastContainer } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase_init'
 
 const AddNewItem = () => {
+  const [user, loading, error] = useAuthState(auth);
+  
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-    console.log(data);
+    data.email = user.email
 
     fetch("http://localhost:5000/bike", {
       method: "POST",
@@ -17,9 +21,7 @@ const AddNewItem = () => {
     })
       .then((response) => response.json())
       .then((json) => {
-        // console.log(json)
-        toast('You are added a new Item');
-        alert('You are added a new Item')
+        toast.success('You are added a new Item');
       });
   };
   return (

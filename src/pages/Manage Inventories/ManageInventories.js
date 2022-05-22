@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import "./ManageInventories.css";
 
 const ManageInventories = () => {
@@ -21,6 +22,7 @@ const ManageInventories = () => {
         .then((res) => res.json())
         .then((data) => {
           // console.log(data)
+          toast('You are delete 1 item.')
           const remaining = inventories.filter((inv) => inv._id !== e._id);
           setInventories(remaining);
         });
