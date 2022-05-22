@@ -1,5 +1,5 @@
 # [Bike Warehouse](https://velvety-entremet-267826.netlify.app/)
-[https://velvety-entremet-267826.netlify.app/](https://velvety-entremet-267826.netlify.app/)
+Live site: [https://velvety-entremet-267826.netlify.app/](https://velvety-entremet-267826.netlify.app/)
 
 Description: This is our Bike warehouse. We do import live from this company. This bikes are very low price. We have many bike in low or high budget.
 
