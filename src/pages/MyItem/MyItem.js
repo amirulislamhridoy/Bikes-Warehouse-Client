@@ -16,7 +16,7 @@ const MyItem = () => {
     if (email) {
       const my =async () => {
         try{
-          const {data} = await axios.get(`https://secure-spire-67449.herokuapp.com/mybike?email=${user.email}`, {
+          const {data} = await axios.get(`https://bikes-warehouse-server.herokuapp.com/mybike?email=${user.email}`, {
             headers: {
               authorization: localStorage.getItem("accessToken"),
             },
@@ -37,7 +37,7 @@ const MyItem = () => {
     // 
     const confirm = window.confirm("Are you sure to DELETE");
     if (confirm) {
-      fetch(`https://secure-spire-67449.herokuapp.com/bike/${e._id}`, {
+      fetch(`https://bikes-warehouse-server.herokuapp.com/bike/${e._id}`, {
         method: 'Delete',
       })
       .then(res => res.json())

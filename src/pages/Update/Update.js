@@ -6,7 +6,7 @@ const Update = () => {
   const [bike, setBike] = useState({});
 
   useEffect(() => {
-    fetch(`https://secure-spire-67449.herokuapp.com/bike/${id}`)
+    fetch(`https://bikes-warehouse-server.herokuapp.com/bike/${id}`)
       .then((res) => res.json())
       .then((data) => setBike(data));
   }, [bike]);
@@ -15,7 +15,7 @@ const Update = () => {
     const quantity = parseInt(bike.quantity) - 1;
     const id = bike._id;
     const data = { quantity, id };
-    fetch("https://secure-spire-67449.herokuapp.com/bike", {
+    fetch("https://bikes-warehouse-server.herokuapp.com/bike", {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {
@@ -33,7 +33,7 @@ const Update = () => {
     const id = bike._id;
     const data = { quantity, id };
 
-    fetch("https://secure-spire-67449.herokuapp.com/bike", {
+    fetch("https://bikes-warehouse-server.herokuapp.com/bike", {
       method: "PUT",
       body: JSON.stringify(data),
       headers: {

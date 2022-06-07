@@ -11,7 +11,7 @@ const AddNewItem = () => {
   const onSubmit = (data) => {
     data.email = user.email
 
-    fetch("https://secure-spire-67449.herokuapp.com/bike", {
+    fetch("https://bikes-warehouse-server.herokuapp.com/bike", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

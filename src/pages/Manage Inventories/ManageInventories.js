@@ -6,7 +6,7 @@ const ManageInventories = () => {
   const [inventories, setInventories] = useState([]);
 
   useEffect(() => {
-    fetch("https://secure-spire-67449.herokuapp.com/bike")
+    fetch("https://bikes-warehouse-server.herokuapp.com/bike")
       .then((res) => res.json())
       .then((data) => setInventories(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageInventories = () => {
   const handleDeleteButton = (e) => {
     const confirm = window.confirm("Are you sure to DELETE");
     if (confirm) {
-      fetch(`https://secure-spire-67449.herokuapp.com/bike/${e._id}`, {
+      fetch(`https://bikes-warehouse-server.herokuapp.com/bike/${e._id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

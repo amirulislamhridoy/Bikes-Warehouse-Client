@@ -46,7 +46,7 @@ const Login = () => {
     setLoad(true);
 
     signInWithEmailAndPassword(email, password);
-    fetch('https://secure-spire-67449.herokuapp.com/login', {
+    fetch('https://bikes-warehouse-server.herokuapp.com/login', {
       method: "POST",
     body: JSON.stringify({email}),
       headers: {
