@@ -3,12 +3,17 @@ Live site: [https://velvety-entremet-267826.netlify.app/](https://velvety-entrem
 
 Description: This is our Bike warehouse. We do import live from this company. This bikes are very low price. We have many bike in low or high budget.
 
-* Protected Route
+* A responsive website. Allowing Customers to Create an Account.
+* Customer Authentication and Authorization
+* Order Products, Buy Products, Delete Product, Private Route.
+* Used Technology: React, React Router, Bootstrap, Axios, Firebase,  React-Hook-From, React-Toastify, MongoDB Atlas,  JSON Web Token(JWT / Jot)  
+
+<!-- * Protected Route
 * Authentication
 * Authorization
 * Add Bike Date
 * Update Bike Date
-* Delete Bike Date
+* Delete Bike Date -->
 
 <!-- # Getting Started with Create React App
 
