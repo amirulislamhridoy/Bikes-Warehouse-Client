@@ -4,6 +4,7 @@ import Inventory from '../Inventory/Inventory';
 import AboutUs from '../AboutUs/AboutUs'
 import OurPartners from './OurPartners/OurPartners';
 import ShortData from './ShortData/ShortData';
+import Testimonial from './Testimonial/Testimonial';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner></Banner>
             <Inventory></Inventory>
             <ShortData></ShortData>
+            <Testimonial></Testimonial>
             <OurPartners></OurPartners>
             {/* <AboutUs /> */}
         </div>

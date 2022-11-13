@@ -1,0 +1,21 @@
+.testimonial hr{
+    border-top: 3px solid #00ffd9;
+    margin-bottom: 0;
+    margin-top: 23px;
+    width: 45px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.content-testimonial{
+    max-width: 400px;
+    min-width: 300px;
+    position: relative;
+    text-align: justify;
+    img{
+        position: absolute;
+        width: 20px;
+        top: -10px;
+        left: 50px;
+    }
+}
