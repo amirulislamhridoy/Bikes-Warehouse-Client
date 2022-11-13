@@ -16,7 +16,7 @@ const AboutUs = () => {
     <section className="" style={{ marginTop: '90px' }}>
       <div style={{ backgroundColor: '#3A7EEE' }}><div className='container'><h2 className=' m-0 pt-4 text-white'>About Us</h2></div></div>
       <div className="" style={{ backgroundImage: "linear-gradient(#3A7EEE,#CDDFFA)" }}>
-        <div className='container d-flex gap-5 align-items-center pb-3' >
+        <div className='container d-lg-flex gap-5 align-items-center pb-3' >
           <div className=''>
             <h2 className='text-white'>Enhancing Human Potential</h2>
             <p className='text-white' style={{ fontWeight: " 500" }}>
@@ -29,7 +29,7 @@ const AboutUs = () => {
       {/* story */}
       <div className='container py-5'>
         <h2>Our Story</h2>
-        <div className="d-flex gap-5 align-items-center">
+        <div className="d-lg-flex gap-5 align-items-center">
           <p className='' style={{ fontWeight: '500' }}>
             Fast of all we are start our business at 2000 in Gazipur. Our business is running now. Now, it is in top 10 business in Bangladesh. Most of the people like our items. Because it is very good. And we are import from abroad live. We want to do this business in full world. We want to be largest business company in world. Our company's share demand very heigh in share market.
           </p>
