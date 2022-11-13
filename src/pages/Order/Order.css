@@ -1,0 +1,15 @@
+.order-form {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.order-form label {
+  grid-column: 1/2;
+}
+.order-form input {
+  grid-column: 2/4;
+  margin-top: 5px;
+}
+.order-form button {
+  grid-column: 1/2;
+  margin: 5px;
+}/*# sourceMappingURL=Order.css.map */

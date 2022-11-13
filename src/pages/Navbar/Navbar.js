@@ -34,37 +34,51 @@ const Navbar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link
+                  className="nav-link active fw-bold"
+                  aria-current="page"
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
               {user && (
-                <>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link active fw-bold"
-                      aria-current="page"
-                      to="/manageInventories"
-                    >
-                      Manage Items
-                    </Link>
-                  </li>
+                <li class="nav-item dropdown">
+                  <Link class="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Manages
+                  </Link>
+                  <ul class="dropdown-menu">
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link active fw-bold"
+                        aria-current="page"
+                        to="/manageInventories"
+                      >
+                        Manage Items
+                      </Link>
+                    </li>
 
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link active fw-bold"
-                      aria-current="page"
-                      to="/addNewItem"
-                    >
-                      Add Items
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link
-                      className="nav-link active fw-bold"
-                      aria-current="page"
-                      to="/myItem"
-                    >
-                      My items
-                    </Link>
-                  </li>
-                </>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link active fw-bold"
+                        aria-current="page"
+                        to="/addNewItem"
+                      >
+                        Add Items
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link active fw-bold"
+                        aria-current="page"
+                        to="/myItem"
+                      >
+                        My items
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
               )}
               <li className="nav-item">
                 <Link

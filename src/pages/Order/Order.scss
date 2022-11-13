@@ -1,0 +1,16 @@
+.order-form{
+    
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    label{
+        grid-column: 1 / 2;
+    }
+    input{
+        grid-column: 2/4;
+        margin-top: 5px;
+    }
+    button{
+        grid-column: 1/2;
+        margin: 5px;
+    }
+}

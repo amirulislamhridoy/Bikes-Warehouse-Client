@@ -14,6 +14,7 @@ import MyItem from './pages/MyItem/MyItem';
 import NotFound from './pages/NotFound/NotFound'
 import RequireAuth from './pages/RequireAuth/RequireAuth.js'
 import Blog from './pages/Blog/Blog';
+import Order from './pages/Order/Order';
 
 function App() {
   return (
@@ -22,9 +23,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/update/:id" element={
-        <RequireAuth>
-          <Update />
+          <RequireAuth>
+            <Update />
           </RequireAuth>} />
+        <Route path='/order/:id' element={
+          <RequireAuth>
+            <Order></Order>
+          </RequireAuth>
+        }> </Route>
         <Route path="/manageInventories" element={<ManageInventories />} />
         <Route path="/addNewItem" element={<AddNewItem />} />
         <Route path="/myItem" element={<MyItem />} />
@@ -33,7 +39,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
       <ToastContainer />
     </div>
   );

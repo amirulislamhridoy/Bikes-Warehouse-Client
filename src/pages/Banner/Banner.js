@@ -39,16 +39,16 @@ const Banner = () => {
           <div className="carousel-item active">
             <img src={banner1} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-danger">First slide label</h5>
+              <h5 className="text-danger">Yamaha R!5 v3</h5>
               <p className="text-danger">
-                Some representative placeholder content for the first slide.
+                This is largest popular bike in Bangladesh.
               </p>
             </div>
           </div>
           <div className="carousel-item">
             <img src={banner3} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-warning">Second slide label</h5>
+              <h5 className="text-warning">Kawasaki 650</h5>
               <p className="text-warning">
                 Some representative placeholder content for the second slide.
               </p>
@@ -57,7 +57,7 @@ const Banner = () => {
           <div className="carousel-item">
             <img src={banner2} className="d-block w-100 vh-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5 className="text-secondary">Third slide label</h5>
+              <h5 className="text-secondary">SUZUKI GSX R</h5>
               <p className="text-secondary">
                 Some representative placeholder content for the third slide.
               </p>
