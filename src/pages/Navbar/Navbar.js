@@ -86,16 +86,16 @@ const Navbar = () => {
                   aria-current="page"
                   to="/about"
                 >
-                  About
+                  About Us
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active fw-bold"
                   aria-current="page"
-                  to="/connect"
+                  to="/contact"
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </li>
               <li className="nav-item">

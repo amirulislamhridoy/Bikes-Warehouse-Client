@@ -17,6 +17,7 @@ import Blog from './pages/Blog/Blog';
 import Order from './pages/Order/Order';
 import AboutUs from './pages/AboutUs/AboutUs';
 import AllItems from './pages/AllItems/AllItems';
+import Contact from './pages/ContactUs/Contact';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
