@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Inventory from '../Inventory/Inventory';
-import AboutUs from '../AboutUs/AboutUs'
 import OurPartners from './OurPartners/OurPartners';
 import ShortData from './ShortData/ShortData';
 import Testimonial from './Testimonial/Testimonial';
@@ -14,7 +13,6 @@ const Home = () => {
             <ShortData></ShortData>
             <Testimonial></Testimonial>
             <OurPartners></OurPartners>
-            {/* <AboutUs /> */}
         </div>
     );
 };

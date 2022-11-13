@@ -2,10 +2,11 @@ import React from "react";
 import banner1 from "../../photos/banner/banner1.jpg";
 import banner2 from "../../photos/banner/banner2.jpg";
 import banner3 from "../../photos/banner/banner3.jpg";
+import './Banner.css'
 
 const Banner = () => {
   return (
-    <div className="">
+    <div>
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
@@ -37,7 +38,7 @@ const Banner = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={banner1} className="d-block w-100 vh-100" alt="..." />
+            <img src={banner1} className="d-block w-100"alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-danger">Yamaha R!5 v3</h5>
               <p className="text-danger">
@@ -46,7 +47,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner3} className="d-block w-100 vh-100" alt="..." />
+            <img src={banner3} className="d-block w-100"alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-warning">Kawasaki 650</h5>
               <p className="text-warning">
@@ -55,7 +56,7 @@ const Banner = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img src={banner2} className="d-block w-100 vh-100" alt="..." />
+            <img src={banner2} className="d-block w-100"alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5 className="text-secondary">SUZUKI GSX R</h5>
               <p className="text-secondary">
@@ -64,24 +65,6 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        {/* <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button> */}
       </div>
     </div>
   );

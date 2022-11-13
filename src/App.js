@@ -15,6 +15,8 @@ import NotFound from './pages/NotFound/NotFound'
 import RequireAuth from './pages/RequireAuth/RequireAuth.js'
 import Blog from './pages/Blog/Blog';
 import Order from './pages/Order/Order';
+import AboutUs from './pages/AboutUs/AboutUs';
+import AllItems from './pages/AllItems/AllItems';
 
 function App() {
   return (
@@ -31,8 +33,14 @@ function App() {
             <Order></Order>
           </RequireAuth>
         }> </Route>
+        <Route path='/allItem' element={
+          <RequireAuth>
+            <AllItems></AllItems>
+          </RequireAuth>
+        }></Route>
         <Route path="/manageInventories" element={<ManageInventories />} />
         <Route path="/addNewItem" element={<AddNewItem />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/myItem" element={<MyItem />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />

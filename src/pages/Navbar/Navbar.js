@@ -84,6 +84,24 @@ const Navbar = () => {
                 <Link
                   className="nav-link active fw-bold"
                   aria-current="page"
+                  to="/about"
+                >
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active fw-bold"
+                  aria-current="page"
+                  to="/connect"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active fw-bold"
+                  aria-current="page"
                   to="/blog"
                 >
                   Blog

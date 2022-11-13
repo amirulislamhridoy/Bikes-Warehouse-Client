@@ -11,7 +11,7 @@ const Footer = () => {
                         <div class="row">
                             <div class="col-md-3 m-b-30">
                                 <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                    About us
+                                About us
                                 </div>
                                 <p class="white-text">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500 text of the printing.
