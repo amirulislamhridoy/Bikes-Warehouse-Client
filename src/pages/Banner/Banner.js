@@ -6,7 +6,7 @@ import './Banner.css'
 
 const Banner = () => {
   return (
-    <div>
+    <div className='container banner-container'>
       <div
         id="carouselExampleCaptions"
         className="carousel slide"

@@ -7,7 +7,7 @@ import auth from '../../firebase_init'
 const AddNewItem = () => {
   const [user, loading, error] = useAuthState(auth);
   
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     data.email = user.email
 
@@ -21,6 +21,7 @@ const AddNewItem = () => {
       .then((response) => response.json())
       .then((json) => {
         toast.success('You are added a new Item');
+        reset()
       });
   };
   return (

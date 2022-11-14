@@ -1,12 +1,35 @@
 @import '../../../SASS/variables';
 
+.navbar.navbar-expand-lg {
+    background-color: $my-Indigo !important;
+    .nav-link.active.fw-bold {
+        color: white;
+        &:hover {
+            color: #dc3545 !important;
+        }
+    }
+}
+.nav-item.dropdown {
+    a {
+        color: white;
+        font-weight: 700;
+        &:hover {
+            color: #dc3545;
+        }
+    }
+    .nav-item{
+        .nav-link.active{
+            color: $my-Secondary !important;
+            padding-left: 5px;
+        }
+    }
+}
+
 .nav-container {
     z-index: 1;
     width: 100%;
 }
-
 .nav-link.active.fw-bold {
-    color: $my-Secondary;
     &:hover {
         color: #dc3545;
     }
@@ -14,39 +37,9 @@
 
 .nav-item.dropdown {
     a {
-        color: $my-Secondary;
         font-weight: 700;
         &:hover {
             color: #dc3545;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .navbar.navbar-expand-lg {
-        background-color: $my-Secondary !important;
-
-        .nav-link.active.fw-bold {
-            color: white !important;
-
-            &:hover {
-                color: #dc3545 !important;
-            }
-        }
-    }
-    .nav-item.dropdown {
-        a {
-            color: white;
-            font-weight: 700;
-            &:hover {
-                color: #dc3545;
-            }
-        }
-        .nav-item{
-            .nav-link.active{
-                color: $my-Secondary !important;
-                padding-left: 5px;
-            }
         }
     }
 }

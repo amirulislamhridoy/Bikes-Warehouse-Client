@@ -21,7 +21,7 @@ import Contact from './pages/ContactUs/Contact';
 
 function App() {
   return (
-    <div>
+    <div className='./App.css'>
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />

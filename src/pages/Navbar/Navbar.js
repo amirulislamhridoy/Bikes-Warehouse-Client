@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg position-fixed top-0 bg-transparent nav-container">
-        <div className="container-fluid">
+        <div className="container">
           <Link className="navbar-brand" to="/">
             <img style={{ height: "50px" }} src={logo} alt="" />
           </Link>
@@ -110,7 +110,7 @@ const Navbar = () => {
             </ul>
             <div className="d-flex" role="search">
               {user ? (
-                <button onClick={handleSignOut} className="btn btn-danger">
+                <button onClick={handleSignOut} className="btn btn-danger fw-bold">
                   Log Out
                 </button>
               ) : (
@@ -119,7 +119,7 @@ const Navbar = () => {
                   aria-current="page"
                   to="/login"
                 >
-                  <button className="btn btn-primary">Log In</button>
+                  <button className="btn btn-primary fw-bold">Log In</button>
                 </Link>
               )}
             </div>

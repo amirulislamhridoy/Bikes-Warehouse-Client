@@ -53,7 +53,7 @@ const MyItem = () => {
     <div className="container mt-5 pt-5 mb-5">
       <div className="row row-cols-3 g-2">
         {bikes.map((bike) => (
-          <div className="card shadow py-4 px-3" key={bike._id}>
+          <div className="card shadow py-4 px-3 border-0" key={bike._id}>
             <img src={bike.img} className="card-img-top" alt="..." />
             <div className="card-body">
               <h4 className="card-title">{bike.name}</h4>
