@@ -7,6 +7,7 @@ import {
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase_init";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import './Login.css'
 
 const Login = () => {
   const [load, setLoad] = useState(false);
@@ -64,7 +65,7 @@ const Login = () => {
   };
   return (
     <div
-      className="w-50 mx-auto"
+      className=" mx-auto login-container"
       style={{ marginTop: "100px", marginBottom: "50px" }}
     >
       <h2>Login</h2>

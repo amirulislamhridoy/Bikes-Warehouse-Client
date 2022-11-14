@@ -1,8 +1,19 @@
-.register-login-link{
-    text-decoration: none;
-    display: block;
-    margin-bottom: 15px;
+.register-container {
+  width: 50%;
 }
-.register-login-link:hover{
-    color: black;
+
+.register-login-link {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
 }
+
+.register-login-link:hover {
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    width: 80%;
+  }
+}/*# sourceMappingURL=Register.css.map */

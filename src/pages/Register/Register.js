@@ -35,7 +35,7 @@ const Register = () => {
     
   return (
     <div
-      className="w-50 mx-auto"
+      className="mx-auto register-container"
       style={{ marginTop: "100px", marginBottom: "50px" }}
     >
       <h2>Sign Up</h2>

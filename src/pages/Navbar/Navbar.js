@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg position-fixed top-0 bg-transparent nav-container">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <img style={{ height: "70px" }} src={logo} alt="" />
+            <img style={{ height: "50px" }} src={logo} alt="" />
           </Link>
           <button
             className="navbar-toggler"
